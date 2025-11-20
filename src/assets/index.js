@@ -32,6 +32,7 @@ import palsome from "./palsome.png";
 import bookingapp from "./bookingapp.png";
 import jobposting from "./jobposting.png";
 import rewards from "./rewards.png";
+import frontEndDev from "./front-end-dev.jpg";
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   bookingapp,
   jobposting,
   rewards,
+  frontEndDev,
 };

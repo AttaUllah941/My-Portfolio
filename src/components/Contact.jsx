@@ -66,7 +66,40 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
+        <div className='mt-8 mb-8'>
+          <div className='flex flex-col gap-4 text-white'>
+            <div className='flex items-center gap-3'>
+              <span className='text-secondary font-medium'>Location:</span>
+              <span className='text-white-100'>Lahore, Pakistan</span>
+            </div>
+            <div className='flex items-center gap-3'>
+              <span className='text-secondary font-medium'>Phone:</span>
+              <a href='tel:+923150094608' className='text-white-100 hover:text-[#915EFF] transition-colors'>
+                +92-315-0094608
+              </a>
+            </div>
+            <div className='flex items-center gap-3'>
+              <span className='text-secondary font-medium'>Email:</span>
+              <a href='mailto:attakhanniazi941@gmail.com' className='text-white-100 hover:text-[#915EFF] transition-colors'>
+                attakhanniazi941@gmail.com
+              </a>
+            </div>
+            <div className='flex items-center gap-3 mt-2'>
+              <span className='text-secondary font-medium'>Connect:</span>
+              <div className='flex gap-4'>
+                <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer' className='text-white-100 hover:text-[#915EFF] transition-colors'>
+                  LinkedIn
+                </a>
+                <span className='text-secondary'>|</span>
+                <a href='https://www.github.com' target='_blank' rel='noopener noreferrer' className='text-white-100 hover:text-[#915EFF] transition-colors'>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form ref={formRef} onSubmit={handleSubmit} className='mt-8 flex flex-col gap-8'>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input

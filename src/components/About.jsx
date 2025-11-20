@@ -8,7 +8,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='xs:w-[250px] w-full flex-shrink-0'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -47,19 +47,24 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm Currently Available. I am a Professional Full stack Web Application Developer
-        I have 3+ years of experience in web development, I create many websites fully responsive, 
-        user-friendly, and mobile-friendly. Do you need a Web Application Developer for your business? 
-        Feel free to contact me. 
-        I work with businesses as well as with individuals. I really enjoy my developing work. 
-        I have a team we are working 3 people together. 
-        So if you need high-quality work fast then message me.
+        I'm an Angular Developer with 2 years of experience building and optimizing dynamic web applications. 
+        Proficient in the full Angular ecosystem, including NgRx, RxJS, and Signals, with a strong focus on 
+        performance, user experience, and robust error handling. A collaborative team player adept at working 
+        in Agile environments to deliver high-quality, maintainable code. I specialize in creating reusable 
+        components, implementing state management solutions, and optimizing application performance to deliver 
+        exceptional user experiences.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className='mt-20 w-full'>
+        <div className='flex flex-wrap gap-10 justify-center items-center'>
+          {services && services.length > 0 ? (
+            services.map((service, index) => (
+              <ServiceCard key={`service-${index}-${service.title}`} index={index} {...service} />
+            ))
+          ) : (
+            <p className='text-white'>No services available</p>
+          )}
+        </div>
       </div>
     </>
   );
